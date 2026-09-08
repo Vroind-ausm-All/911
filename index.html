@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>911.exe — DIE MAXIMALE 911 MEMESEITE</title>
+<meta name="description" content="Porsche 911, Notruf 911, Cockpit-Chaos. Maximalismus bis der Boxermotor raucht.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚨</text></svg>">
+<style>
+:root{
+  --hot:#ff2e88; --cyan:#00f0ff; --acid:#c8ff00; --grape:#7b2cff;
+  --sun:#ffb800; --ink:#0a0018; --paper:#fff7fb;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:"Impact","Haettenschweiler","Arial Black",system-ui,sans-serif;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(255,46,136,.35), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(0,240,255,.30), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(123,44,255,.40), transparent 55%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.04) 0 12px, transparent 12px 24px);
+  background-attachment:fixed;
+}
+::selection{background:var(--acid);color:#000}
+
+/* ---------- ALARM BAR ---------- */
+.alarm{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:repeating-linear-gradient(90deg,var(--hot) 0 40px,#000 40px 80px);
+  color:#fff;font-size:13px;letter-spacing:.25em;padding:6px 0;
+  border-bottom:4px solid var(--acid);
+  animation:blinkbar .8s steps(2) infinite;
+}
+@keyframes blinkbar{50%{filter:hue-rotate(180deg) saturate(2)}}
+.alarm .track{display:flex;gap:3rem;white-space:nowrap;animation:slide 18s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- HERO ---------- */
+header{padding:90px 16px 40px;text-align:center;position:relative}
+.siren{font-size:clamp(60px,14vw,180px);line-height:.8;animation:wob 1.4s ease-in-out infinite alternate}
+@keyframes wob{from{transform:rotate(-14deg) scale(.92)}to{transform:rotate(14deg) scale(1.1)}}
+h1{
+  font-size:clamp(64px,20vw,230px);margin:.05em 0;line-height:.78;
+  background:linear-gradient(92deg,var(--hot),var(--sun),var(--acid),var(--cyan),var(--grape),var(--hot));
+  background-size:600% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 60px rgba(255,46,136,.6);
+  animation:rain 6s linear infinite;
+  letter-spacing:-.04em;
+}
+@keyframes rain{to{background-position:600% 0}}
+.sub{font-family:"Comic Sans MS","Chalkboard SE",cursive;font-size:clamp(16px,3.4vw,30px);color:var(--acid);
+  text-shadow:3px 3px 0 var(--hot),-2px -2px 0 var(--cyan);transform:rotate(-2deg);max-width:820px;margin:14px auto}
+.badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 0}
+.badge{border:3px solid var(--acid);background:#000;padding:8px 14px;border-radius:999px;font-size:12px;
+  letter-spacing:.18em;transform:rotate(var(--r,0deg));box-shadow:5px 5px 0 var(--hot)}
+
+/* ---------- MARQUEES ---------- */
+.mq{overflow:hidden;border-block:5px solid #000;background:var(--acid);color:#000;padding:10px 0;margin:34px 0;
+  font-size:clamp(20px,4vw,44px);transform:rotate(-1.2deg)}
+.mq.alt{background:var(--cyan);transform:rotate(1.2deg)}
+.mq .track{display:flex;gap:2rem;white-space:nowrap;animation:slide 22s linear infinite}
+.mq.alt .track{animation-direction:reverse;animation-duration:16s}
+
+/* ---------- LAYOUT ---------- */
+main{max-width:1200px;margin:0 auto;padding:0 16px 120px}
+section{margin:70px 0}
+h2{
+  font-size:clamp(34px,7vw,74px);margin:0 0 8px;line-height:.9;
+  color:#fff;text-shadow:4px 4px 0 var(--hot),8px 8px 0 var(--grape),12px 12px 0 var(--cyan);
+  transform:rotate(-1.5deg)
+}
+.kicker{font-family:"Comic Sans MS",cursive;color:var(--sun);font-size:15px;letter-spacing:.2em;margin-bottom:26px}
+
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.card{
+  background:#12002b;border:4px solid #000;border-radius:18px;padding:0;overflow:hidden;
+  box-shadow:10px 10px 0 var(--hot);transform:rotate(var(--r,0deg));transition:.18s;position:relative
+}
+.card:nth-child(3n) {box-shadow:10px 10px 0 var(--cyan)}
+.card:nth-child(3n+1){box-shadow:10px 10px 0 var(--acid)}
+.card:hover{transform:rotate(0) scale(1.05) translateY(-6px);z-index:5;box-shadow:0 0 0 6px var(--sun),18px 18px 0 var(--grape)}
+.meme{aspect-ratio:1/1;display:grid;place-items:center;font-size:76px;position:relative;
+  background:conic-gradient(from 0deg,var(--hot),var(--sun),var(--acid),var(--cyan),var(--grape),var(--hot));}
+.meme span{filter:drop-shadow(0 6px 0 rgba(0,0,0,.6));animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px) scale(1.12)}}
+.top,.bot{position:absolute;left:0;right:0;text-align:center;color:#fff;font-size:19px;padding:6px 8px;line-height:1.05;
+  text-shadow:2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000;-webkit-text-stroke:1px #000}
+.top{top:8px}.bot{bottom:8px}
+.cap{padding:14px;font-family:"Comic Sans MS",cursive;font-size:14px;color:var(--cyan);border-top:4px solid #000;background:#000}
+
+/* ---------- FACT BOXES ---------- */
+.facts{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.fact{border:4px dashed var(--acid);border-radius:14px;padding:18px;background:rgba(0,0,0,.55);transform:rotate(var(--r,0deg))}
+.fact b{display:block;font-size:44px;color:var(--sun);line-height:1}
+.fact p{font-family:"Comic Sans MS",cursive;font-size:14px;color:#fff;margin:8px 0 0}
+
+/* ---------- SOUNDBOARD-ISH BUTTONS ---------- */
+.board{display:flex;flex-wrap:wrap;gap:14px}
+button.mega{
+  font-family:inherit;font-size:20px;padding:16px 22px;border:4px solid #000;border-radius:14px;cursor:pointer;
+  background:linear-gradient(180deg,var(--sun),var(--hot));color:#000;box-shadow:6px 6px 0 #000;letter-spacing:.05em
+}
+button.mega:active{transform:translate(6px,6px);box-shadow:0 0 0 #000}
+#verdict{margin-top:22px;font-size:clamp(22px,5vw,48px);color:var(--acid);min-height:1.4em;
+  text-shadow:3px 3px 0 var(--hot);transform:rotate(-1deg)}
+
+/* ---------- TICKER TABLE ---------- */
+table{width:100%;border-collapse:collapse;font-size:15px;background:#000;border:4px solid var(--cyan)}
+th,td{border:2px solid var(--grape);padding:10px 12px;text-align:left}
+th{background:var(--grape);color:#fff;letter-spacing:.14em}
+td:last-child{font-family:"Comic Sans MS",cursive;color:var(--acid)}
+
+/* ---------- FLOATING JUNK ---------- */
+.float{position:fixed;pointer-events:none;font-size:30px;z-index:1;opacity:.75;animation:fly linear infinite}
+@keyframes fly{from{transform:translate(-10vw,0) rotate(0)}to{transform:translate(110vw,-30vh) rotate(720deg)}}
+
+footer{text-align:center;padding:50px 16px 90px;border-top:6px solid var(--acid);background:#000}
+footer p{font-family:"Comic Sans MS",cursive;color:#ff8ec7;font-size:13px;max-width:700px;margin:10px auto}
+a{color:var(--cyan)}
+.blink{animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:.15}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="alarm"><div class="track" id="alarmtrack"></div></div>
+
+<header>
+  <div class="siren">🚨🏎️✈️🚨</div>
+  <h1>911</h1>
+  <p class="sub">Die einzige Zahl, die gleichzeitig ein Heckmotor-Sportwagen, ein Notruf und dein Kontostand nach dem Werkstattbesuch ist.</p>
+  <div class="badges">
+    <span class="badge" style="--r:-3deg">HECKMOTOR-GANG</span>
+    <span class="badge" style="--r:2deg">FLAT-SIX SUPREMACY</span>
+    <span class="badge" style="--r:-1deg">TOWER, WIR HABEN EIN PROBLEM</span>
+    <span class="badge" style="--r:4deg">100% BOOMER-APPROVED</span>
+    <span class="badge" style="--r:-2deg">1998 ANGRY (WASSERKÜHLUNG)</span>
+  </div>
+</header>
+
+<div class="mq"><div class="track" id="mq1"></div></div>
+
+<main>
+
+<section>
+  <h2>🏎️ ABTEILUNG: AUTO</h2>
+  <p class="kicker">HECK RAUS. GELDBEUTEL LEER. LEBEN GUT.</p>
+  <div class="grid" id="carGrid"></div>
+</section>
+
+<div class="mq alt"><div class="track" id="mq2"></div></div>
+
+<section>
+  <h2>✈️ ABTEILUNG: FLUGZEUGE</h2>
+  <p class="kicker">SQUAWK 7700, ABER MIT STIL</p>
+  <div class="grid" id="planeGrid"></div>
+</section>
+
+<section>
+  <h2>🚨 ABTEILUNG: NOTRUF</h2>
+  <p class="kicker">911, WAS IST IHR NOTFALL? — „MEIN AUTO HAT NUR 6 ZYLINDER"</p>
+  <div class="grid" id="emGrid"></div>
+</section>
+
+<div class="mq"><div class="track" id="mq3"></div></div>
+
+<section>
+  <h2>📊 DATEN, DIE NIEMAND WOLLTE</h2>
+  <p class="kicker">ZU 911% WISSENSCHAFTLICH</p>
+  <div class="facts">
+    <div class="fact" style="--r:-1.5deg"><b>911</b><p>Zylinder, die dein Nachbar hört, obwohl es nur sechs sind.</p></div>
+    <div class="fact" style="--r:1.5deg"><b>0–100</b><p>in „hab ich gerade meine Miete ausgegeben" Sekunden.</p></div>
+    <div class="fact" style="--r:-2deg"><b>7700</b><p>Der Squawk-Code für: Ich habe die Kreditkartenabrechnung geöffnet.</p></div>
+    <div class="fact" style="--r:2deg"><b>∞</b><p>Anzahl der Leute, die dir erklären, dass der Motor „hinten falsch" sitzt.</p></div>
+    <div class="fact" style="--r:-1deg"><b>1963</b><p>Jahr, seit dem sich das Design nicht ändert. Funktioniert bis heute.</p></div>
+    <div class="fact" style="--r:3deg"><b>2</b><p>Rücksitze. Theoretisch. Für Menschen ohne Beine.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>🎰 DER 911-GENERATOR</h2>
+  <p class="kicker">DRÜCK DEN KNOPF. VERTRAU DEM PROZESS.</p>
+  <div class="board">
+    <button class="mega" onclick="roll()">🚨 NOTRUF ABSETZEN</button>
+    <button class="mega" onclick="chaos()">🌈 MEHR MAXIMALISMUS</button>
+    <button class="mega" onclick="shuffleAll()">🔀 MEMES NEU MISCHEN</button>
+  </div>
+  <div id="verdict">Drück den roten Knopf. Er ist rosa. Egal.</div>
+</section>
+
+<section>
+  <h2>📋 DER OFFIZIELLE 911-ÜBERSETZER</h2>
+  <p class="kicker">WAS GESAGT WIRD vs. WAS GEMEINT IST</p>
+  <table>
+    <tr><th>Gesagt</th><th>Gemeint</th></tr>
+    <tr><td>„Ist nur ein Basismodell."</td><td>Ich habe drei Optionen abgewählt und trotzdem 40k draufgezahlt.</td></tr>
+    <tr><td>„Das Heck ist lebendig."</td><td>Ich fahre bei Regen 40.</td></tr>
+    <tr><td>„Ich fliege nur Economy."</td><td>Ich kenne trotzdem jeden Triebwerkstyp auswendig.</td></tr>
+    <tr><td>„Leichte Turbulenz."</td><td>Der Kaffee ist jetzt an der Decke.</td></tr>
+    <tr><td>„Wartung ist überschaubar."</td><td>Bitte fragt nicht nach den Kupplungskosten.</td></tr>
+    <tr><td>„911, was ist Ihr Notfall?"</td><td>Bitte sag Auto. Bitte sag Auto.</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>🥇 TIER LIST: DINGE, DIE 911 HEISSEN</h2>
+  <p class="kicker">ABSOLUT NICHT VERHANDELBAR</p>
+  <div class="grid" id="tierGrid"></div>
+</section>
+
+</main>
+
+<div class="mq alt"><div class="track" id="mq4"></div></div>
+
+<footer>
+  <div class="siren" style="font-size:56px">🚨🏎️🚨</div>
+  <p class="blink">GEBAUT MIT 100% HANDGESCHRIEBENEM CSS UND 0% GESCHMACK</p>
+  <p>Satire &amp; Fanprojekt. Nicht mit Porsche AG, irgendeiner Fluglinie oder irgendeiner echten Notrufzentrale verbunden.
+  <strong>Echte Notfälle: 112 (EU) / 911 (US).</strong> Bitte diese Seite nicht anrufen, sie hat kein Telefon.</p>
+  <p>Keine Boxermotoren wurden bei der Erstellung dieser Seite beschädigt. Der Geldbeutel schon.</p>
+</footer>
+
+<script>
+/* ---------- content ---------- */
+const alarmWords=["⚠️ ACHTUNG MAXIMALISMUS","🚨 HECK ZUERST","✈️ FASTEN SEATBELT","🏎️ FLAT SIX","💸 KUPPLUNG KAPUTT","📞 911 WAS IST IHR NOTFALL"];
+const mqText={
+ mq1:"🏎️ HECKMOTOR ★ HECKMOTOR ★ HECKMOTOR ★ WIESO IST DA HINTEN EIN MOTOR ★ ",
+ mq2:"✈️ SQUAWK 7700 ★ FLAPS 2 ★ GEAR DOWN ★ WHERE MY BOEING AT ★ ",
+ mq3:"💸 KOSTENVORANSCHLAG ★ 💸 KOSTENVORANSCHLAG ★ 💸 WEINEN ★ ",
+ mq4:"🚨 DANKE FÜRS SCROLLEN ★ JETZT KAUF DIR EIN AUTO ★ ODER NICHT ★ "};
+
+const memes={
+carGrid:[
+ {e:"🏎️",t:"MOTOR VORNE?",b:"KENN ICH NICHT",c:"Physik: nein. Vibes: ja."},
+ {e:"🌀",t:"ÜBERSTEUERN",b:"IST EIN FEATURE",c:"Der Sicherheitsgurt ist auch ein Feature."},
+ {e:"💸",t:"KOSTENVORANSCHLAG",b:"VIER STELLEN. LINKS.",c:"Der Mechaniker lächelt zu freundlich."},
+ {e:"🐸",t:"FROSCHAUGEN 996",b:"WIR HABEN VERGEBEN",c:"Historisch günstig. Historisch umstritten."},
+ {e:"🅿️",t:"QUERPARKEN",b:"ZWEI PLÄTZE, EIN TRAUM",c:"Steinschläge sind für andere Leute."},
+ {e:"🔧",t:"NUR MAL SCHNELL",b:"ÖLWECHSEL",c:"Drei Wochen später, immer noch auf der Bühne."},
+ {e:"🎩",t:"MANUELL ODER GAR NICHT",b:"SAGT DER PDK-FAHRER",c:"Er ist 0,4s schneller und weint trotzdem."},
+ {e:"🌧️",t:"REGEN ERKANNT",b:"AUTO BLEIBT IN GARAGE",c:"Ein Wetterbericht ist ein Terminplan."}
+],
+planeGrid:[
+ {e:"✈️",t:"BOARDING GROUP 9",b:"VON 11",c:"Du wirst dein Gepäck nie wiedersehen."},
+ {e:"🛫",t:"„LEICHTE TURBULENZ\"",b:"KAFFEE AN DER DECKE",c:"Der Pilot klingt trotzdem entspannt."},
+ {e:"🧳",t:"HANDGEPÄCK",b:"NUR EIN KLEINER KOFFER",c:"Der Koffer: 47 kg, hat eine eigene Postleitzahl."},
+ {e:"🛬",t:"BUTTER LANDING",b:"APPLAUS IN DER KABINE",c:"Piloten hassen diesen einen Trick."},
+ {e:"📡",t:"FLIGHTRADAR OFFEN",b:"SEIT 4 STUNDEN",c:"Ich fliege nirgendwohin. Ich schaue nur."},
+ {e:"🪟",t:"FENSTERPLATZ",b:"3 MAL AUFSTEHEN",c:"Der Gangplatz-Typ hat Augenkontakt vermieden."},
+ {e:"🍹",t:"TOMATENSAFT",b:"NUR ÜBER 10.000 FUSS",c:"Wissenschaftlich belegt, emotional notwendig."},
+ {e:"🎧",t:"TRIEBWERKS-ASMR",b:"8 STUNDEN LOOP",c:"Besser als jede Meditations-App."}
+],
+emGrid:[
+ {e:"📞",t:"911, IHR NOTFALL?",b:"MEIN AUTO IST ZU LAUT",c:"Das ist kein Notfall. Doch. Für die Nachbarn."},
+ {e:"🚑",t:"BLAULICHT",b:"IMMER NOCH LANGSAMER",c:"Nein. Bitte fahr rechts ran."},
+ {e:"🔥",t:"IT'S FINE",b:"ALLES BRENNT",c:"Der Hund trinkt Kaffee. Klassiker."},
+ {e:"🧯",t:"FEUERLÖSCHER IM KOFFERRAUM",b:"VORNE. NATÜRLICH VORNE.",c:"Kofferraum vorne, Motor hinten, Logik nirgends."},
+ {e:"🚔",t:"NUR 30 GEFAHREN",b:"IN DER 30er ZONE",c:"Der seltenste Meme dieser Seite."},
+ {e:"🆘",t:"SOS",b:"HAB DEN 4. GANG VERPASST",c:"Ruf lieber nicht wirklich an."}
+],
+tierGrid:[
+ {e:"🏆",t:"S-TIER",b:"DER 911",c:"Ein Auto, das seit 60 Jahren dieselbe Frisur trägt."},
+ {e:"🥈",t:"A-TIER",b:"DIE ZAHL 911",c:"Prim? Nein. Egal? Ja."},
+ {e:"🥉",t:"B-TIER",b:"911 ALS UHRZEIT",c:"9:11 — genau eine Minute zu spät für alles."},
+ {e:"🗑️",t:"F-TIER",b:"911 UNGELESENE MAILS",c:"Das ist ein echter Notfall."}
+]};
+const verdicts=["Dein Notfall: zu wenig Hubraum.","Diagnose: chronischer Heckmotor.","Der Tower sagt: negativ, Ghost Rider.","Das Ergebnis: kaufen. Sofort. Mit welchem Geld?","911 sagt: leg auf und geh spazieren.","Turbulenz-Level: Kaffee weg.","Verdikt: das Heck ist ausgebrochen, emotional.","Gutachten: Sie brauchen kein Auto, Sie brauchen Therapie. Nehmen Sie das Auto."];
+
+/* ---------- render ---------- */
+const rot=()=>(Math.random()*5-2.5).toFixed(2)+"deg";
+function fillTrack(el,txt){el.innerHTML="<span>"+txt.repeat(4)+"</span><span>"+txt.repeat(4)+"</span>"}
+Object.entries(mqText).forEach(([id,t])=>fillTrack(document.getElementById(id),t));
+fillTrack(document.getElementById("alarmtrack"),alarmWords.join("  ✦  ")+"  ✦  ");
+
+function cardHTML(m){return `<div class="card" style="--r:${rot()}">
+  <div class="meme"><div class="top">${m.t}</div><span>${m.e}</span><div class="bot">${m.b}</div></div>
+  <div class="cap">${m.c}</div></div>`}
+function render(){Object.entries(memes).forEach(([id,list])=>{
+  document.getElementById(id).innerHTML=list.map(cardHTML).join("")})}
+render();
+
+function shuffleAll(){Object.values(memes).forEach(l=>l.sort(()=>Math.random()-.5));render()}
+function roll(){const v=document.getElementById("verdict");
+  v.textContent=verdicts[Math.floor(Math.random()*verdicts.length)];
+  v.style.transform="rotate("+rot()+") scale(1.06)";
+  setTimeout(()=>v.style.transform="rotate(-1deg)",220);
+  burst(14)}
+let hue=0;
+function chaos(){hue+=40;document.body.style.filter="hue-rotate("+hue+"deg) saturate(1.25)";burst(30)}
+
+/* ---------- floating junk ---------- */
+const junk=["🚨","🏎️","✈️","💸","🔧","🌀","🛞","📡","🧯","🍹"];
+function burst(n){for(let i=0;i<n;i++){
+  const d=document.createElement("div");d.className="float";
+  d.textContent=junk[Math.floor(Math.random()*junk.length)];
+  d.style.top=(Math.random()*100)+"vh";
+  d.style.fontSize=(18+Math.random()*40)+"px";
+  d.style.animationDuration=(4+Math.random()*6)+"s";
+  document.body.appendChild(d);setTimeout(()=>d.remove(),10000)}}
+setInterval(()=>burst(2),1800);burst(10);
+
+/* konami-lite: doppelklick auf die 1 */
+document.querySelector("h1").addEventListener("click",()=>{chaos();burst(40)});
+</script>
+</body>
+</html>
