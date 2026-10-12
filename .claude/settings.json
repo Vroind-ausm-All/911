@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "extraKnownMarketplaces": {
     "claude-kit": {
       "source": { "source": "github", "repo": "johnnyvizz/claude-kit" }
